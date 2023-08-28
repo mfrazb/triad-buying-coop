@@ -3,9 +3,15 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
-app.listen(port, () => console.log(`Listening on port ${PORT}`));
+// ROUTERS
+const userRouter = require('./routes/users.js');
 
-app.get('/express_backend', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
+app.use(express.json());
+
+app.use('/api/users', userRouter);
+
+app.get('/api', (req, res) => {
+  res.send('hello world from express!');
 });
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
