@@ -8,6 +8,18 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, '/dist'),
   },
+  devServer: {
+    port: 8080,
+    hot: true,
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        router: () => 'http://localhost:3000',
+        logLevel: 'debug',
+      },
+    },
+  },
 
   plugins: [
     new HtmlWebpackPlugin({
