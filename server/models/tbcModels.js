@@ -1,20 +1,13 @@
-const mongoose = require('mongoose');
+// client - 1 static connection to postgres server
+// pool - dynamic num of clients with automatic reconnect functionality
+// pool should be used for frequent or concurrent requests
+const { Pool, Client } = require('pg');
 
-const MONGO_URI =
-  'mongodb+srv://admin:WdZ5EKfDBOqRcCuV@cluster0.6frr5dp.mongodb.net/?retryWrites=true&w=majority';
+const PG_URI =
+  '';
 
-mongoose
-  .connect(MONGO_URI, {
-    dbName: 'tbc',
-  })
-  .then(() => console.log('Connected to Mongo DB.'))
-  .catch(err => console.log(err));
+const pool = new Pool({
+  connectionString: PG_URI,
+});
 
-const Scheme = mongoose.Schema;
-
-// set schema for each collection
-
-// create model for each collection that will be part of the export
-
-// export in an object all the models to be used in the controller
 module.exports = {};
