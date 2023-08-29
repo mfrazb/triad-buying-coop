@@ -4,10 +4,26 @@
 const { Pool, Client } = require('pg');
 
 const PG_URI =
-  '';
+  'postgres://zyoderle:JVX_GPdJzAhhwROJyTAI0WPflt6HhGON@rajje.db.elephantsql.com/zyoderle';
 
 const pool = new Pool({
   connectionString: PG_URI,
 });
 
-module.exports = {};
+// ADD SCHEMA IMG FOR FUTURE
+// Schema for the database can be found below:
+// https://github.com/CodesmithLLC/unit-10SB-databases/blob/master/docs/assets/images/schema.png
+
+/*
+ADD NOTES FOR TABLES
+ TABLES
+ products
+ JOIN TABLES
+*/
+
+module.exports = {
+  query: (text, params, callback) => {
+    console.log('executed query', text);
+    return pool.query(text, params, callback);
+  },
+};
