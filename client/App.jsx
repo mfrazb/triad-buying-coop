@@ -1,12 +1,11 @@
 import React from 'react';
-import './css/App.css';
-import User from './components/User.jsx';
+import './stylesheets/App.css';
+import MainContainer from './containers/MainContainer';
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello world!</h1>
-      <User />
+    <div id='app'>
+      <MainContainer />
     </div>
   );
 };

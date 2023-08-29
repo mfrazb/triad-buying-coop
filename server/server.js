@@ -14,4 +14,8 @@ app.get('/api', (req, res) => {
   res.send('hello world from express!');
 });
 
+// add 404 page route
+
+// add global error handler
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
