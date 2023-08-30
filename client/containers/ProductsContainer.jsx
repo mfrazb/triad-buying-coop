@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 const ProductsContainer = () => {
-  /* SET UP FETCH TO DB FOR PRODUCTS LIST 
-  const [users, setUsers] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const fetchUsers = () => {
-    fetch('/api/users')
+    fetch('/api/products')
       .then(resp => resp.json())
-      .then(data => setUsers(data))
+      .then(data => setProducts(data))
       .catch(error => console.log(error));
   };
 
   useEffect(fetchUsers, []);
-
-  const usersDivs = users.map(user => {
-    return (
-      <p>
-        Username: {user.username}, Age: {user.age}
-      </p>
-    );
+  console.log(products);
+  const productCards = products.map(product => {
+    return <h3>Product: {product.product_name}</h3>;
   });
-  */
 
   /* ADD PHOTOS TO EACH PRODUCT 
 
@@ -36,7 +30,8 @@ const ProductsContainer = () => {
 
   useEffect(fetchProducts, []);
 */
-  return <div></div>;
+
+  return <div>{productCards}</div>;
 };
 
 export default ProductsContainer;
