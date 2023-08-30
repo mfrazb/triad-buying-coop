@@ -51,10 +51,10 @@ CREATE TABLE products (
 
  INSERT INTO products VALUES (10001, 4132, 'apple', 'produce', 'Harmony Ridge', true, 'NC', 1.55, 1, 'apple', 1, 40, '2023-01-01', 'active');
  INSERT INTO products VALUES (10002, 4132, 'cranberries', 'produce', 'Harmony Ridge', false, 'NC', 4.00, 1, 'lbs', 1, 20, '2023-01-01', 'active');
-/*
+
   COPY products("_id", "product_code", "product_name", "category", "vendor", "organic", "local", "price_per_unit", "unit_quantity", "unit_type", "min_order_quantity","product_quantity", "date_added", "status") 
   FROM '/Users/meredithb
   ritt/Library/CloudStorage/Dropbox/design_mfb/projects-design/tbc-design-files/tbc_data_tables/tbc_products.csv'
   DELIMITER ','
-  CSV HEADER
-  */
+  CSV HEADER;
+  

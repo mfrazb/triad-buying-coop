@@ -12,6 +12,7 @@ const ProductsContainer = () => {
 
   useEffect(fetchUsers, []);
   console.log(products);
+  
   const productCards = products.map(product => {
     return <h3>Product: {product.product_name}</h3>;
   });
