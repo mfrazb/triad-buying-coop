@@ -31,3 +31,9 @@ a {
 a:hover {
   color: red;
 }
+
+@media (max-width: 600px) {
+  #nav {
+    flex-direction: column;
+  }
+}
