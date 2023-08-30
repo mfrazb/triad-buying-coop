@@ -1,5 +1,6 @@
 import React from 'react';
 import './../stylesheets/Product.css';
+import appleImg from './../assets/produce_apples.png';
 
 const Product = props => {
   const { productData } = props;
@@ -15,14 +16,16 @@ const Product = props => {
           <p>Vendor: {productData.vendor}</p>
           <p>
             <em>
-              ${productData.price_per_unit} per{' '}
+              ${Number(productData.price_per_unit).toFixed(2)} per{' '}
               {Number(productData.unit_quantity).toFixed(0)}{' '}
               {productData.unit_type}
             </em>
           </p>
           <button>Add to Cart</button>
         </div>
-        <div className='img-placeholder'></div>
+        <div className='img-placeholder'>
+          <img className='img-produce' src={appleImg}></img>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,8 @@
 :root {
   --main-font-clr: #36454f;
   --main-font-family: 'Cormorant', serif;
-  --main-accent-clr: #efd4cf;
+  --main-accent-clr: rgb(239, 212, 207);
+  --lt-accent-clr: rgba(239, 212, 207, 0.5);
 }
 * {
   margin: 0;
@@ -19,5 +20,14 @@ body {
   align-items: center;
 }
 
-#app {
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
 }

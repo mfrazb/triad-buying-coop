@@ -13,7 +13,19 @@ const NavContainer = () => {
         </div>
       </div>
       <div id='user'>
-        <h1>User Details</h1>
+        <a className='user-icons' href='#'>
+          <h2 className='user-icons'>tbcshopper</h2>
+        </a>
+        <a className='user-icons' href='#'>
+          <span className='user-icons material-symbols-outlined'>
+            diversity_3
+          </span>
+        </a>
+        <a className='user-icons' href='#'>
+          <span className='user-icons material-symbols-outlined'>
+            shopping_cart
+          </span>
+        </a>
       </div>
     </div>
   );
