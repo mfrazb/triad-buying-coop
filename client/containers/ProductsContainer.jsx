@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+//IMPORT COMPONENTS
+import Product from './../components/Product.jsx';
+
 const ProductsContainer = () => {
   const [products, setProducts] = useState([]);
 
@@ -12,9 +15,18 @@ const ProductsContainer = () => {
 
   useEffect(fetchUsers, []);
   console.log(products);
-  
-  const productCards = products.map(product => {
-    return <h3>Product: {product.product_name}</h3>;
+
+  const productCards = products.map((product, index) => {
+    console.log(product);
+    return (
+      <div id='productContainer'>
+        <Product
+          key={`productCard-${index}`}
+          id={`productCard-${index}`}
+          productData={product}
+        />
+      </div>
+    );
   });
 
   /* ADD PHOTOS TO EACH PRODUCT 
