@@ -1,0 +1,35 @@
+.product-card {
+  padding: 1rem;
+  background-color: var(--main-accent-clr);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  min-width: 276px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.img-placeholder {
+  height: 75px;
+  width: 75px;
+  background-color: lightyellow;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+button {
+  margin: 0.5rem 0 0 0;
+  padding: 0.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

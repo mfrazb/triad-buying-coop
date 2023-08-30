@@ -3,6 +3,7 @@
 :root {
   --main-font-clr: #36454f;
   --main-font-family: 'Cormorant', serif;
+  --main-accent-clr: #efd4cf;
 }
 * {
   margin: 0;

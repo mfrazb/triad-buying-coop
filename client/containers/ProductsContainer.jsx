@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './../stylesheets/ProductContainer.css';
 
 //IMPORT COMPONENTS
 import Product from './../components/Product.jsx';
@@ -19,16 +20,15 @@ const ProductsContainer = () => {
   const productCards = products.map((product, index) => {
     console.log(product);
     return (
-      <div id='productContainer'>
-        <Product
-          key={`productCard-${index}`}
-          id={`productCard-${index}`}
-          productData={product}
-        />
-      </div>
+      <Product
+        key={`productCard-${index}`}
+        id={`productCard-${index}`}
+        productData={product}
+      />
     );
   });
 
+  console.log(productCards);
   /* ADD PHOTOS TO EACH PRODUCT 
 
   const fetchProducts = () => {
@@ -44,7 +44,7 @@ const ProductsContainer = () => {
   useEffect(fetchProducts, []);
 */
 
-  return <div>{productCards}</div>;
+  return <div id='productContainer'>{productCards}</div>;
 };
 
 export default ProductsContainer;
