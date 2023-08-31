@@ -15,7 +15,6 @@ const ProductsContainer = () => {
   };
 
   useEffect(fetchUsers, []);
-  console.log(products);
 
   const productCards = products.map((product, index) => {
     console.log(product);
@@ -28,7 +27,6 @@ const ProductsContainer = () => {
     );
   });
 
-  console.log(productCards);
   /* ADD PHOTOS TO EACH PRODUCT 
 
   const fetchProducts = () => {

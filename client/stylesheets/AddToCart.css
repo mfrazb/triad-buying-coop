@@ -1,0 +1,37 @@
+.cart-button {
+  margin: 0.5rem 0 0 0;
+  padding: 0.2em 0.5em;
+
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.clicked {
+  background-color: var(--button-highlight-color);
+
+  padding: 0 0.5em 0.2em 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-button span {
+  font-size: 2em;
+  color: white;
+}
+
+.item-count {
+  flex-shrink: 1;
+  font-size: 1.2em;
+  text-align: center;
+  border: none;
+  color: white;
+  outline: yellow;
+  background-color: transparent;
+}
+
+.max-notice {
+  color: red;
+}

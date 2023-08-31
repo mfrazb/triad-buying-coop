@@ -1,6 +1,6 @@
 const db = require('../models/tbcModels.js');
 
-const productController = {};
+const userController = {};
 
 //retrieve all products from db
 productController.getProducts = async (req, res, next) => {

@@ -7,10 +7,7 @@ import NavContainer from './NavContainer.jsx';
 import ProductsContainer from './ProductsContainer.jsx';
 import FooterContainer from './FooterContainer.jsx';
 
-function MainContainer() {
-  // STATE HOOKS
-  // HANDLERS
-
+const MainContainer = () => {
   return (
     <div id='mainContainer' className='container'>
       <NavContainer />
@@ -18,6 +15,6 @@ function MainContainer() {
       <FooterContainer />
     </div>
   );
-}
+};
 
 export default MainContainer;

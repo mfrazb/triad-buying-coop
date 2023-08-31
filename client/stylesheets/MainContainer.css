@@ -1,4 +1,4 @@
 #mainContainer {
-  max-width: 1280px;
-  /* border: solid green 3px; */
+  /* limits width when smaller than 1280 to 90% of screen*/
+  max-width: min(90%, 1280px);
 }
