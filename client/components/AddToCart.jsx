@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './../stylesheets/AddToCart.css';
 
 const AddToCart = ({ productData }) => {
-  // TO DO - deconstruct productData to only bring in what is needed and refactor func
-  console.log('productdata available to AddToCart button:', productData);
+  // TO DO - deconstruct productData to only bring in what is needed and refactor component
+  // console.log('productdata available to AddToCart button:', productData);
 
   // STATE HOOKS
   const [count, setCount] = useState(0);
@@ -39,7 +39,6 @@ const AddToCart = ({ productData }) => {
   // post draft order of product when user focuses on another part of page
   // TO DO - pass in member_id using UseContext hook
   const postDraftOrder = event => {
-    console.log('onBlur:', event.target);
     const body = {
       ordered_quantity: count,
       ordered_status: 'draft',

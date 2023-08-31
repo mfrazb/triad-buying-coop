@@ -17,7 +17,6 @@ const ProductsContainer = () => {
   useEffect(fetchUsers, []);
 
   const productCards = products.map((product, index) => {
-    console.log(product);
     return (
       <Product
         key={`productCard-${index}`}

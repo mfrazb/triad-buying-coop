@@ -5,7 +5,7 @@ import appleImg from './../assets/produce_apples.png';
 
 const Product = props => {
   const { productData } = props;
-  console.log('productdata available to Product:', productData);
+  // console.log('productdata available to Product:', productData);
 
   return (
     <div className='product-card'>
