@@ -21,17 +21,6 @@ memberController.getMember = async (req, res, next) => {
 };
 
 // TO DO: user signs up for co-op
-memberController.addMember = async (req, res, next) => {
-  console.log(req.params.id);
-  try {
-    res.locals.newProducts = 'hello Meredith';
-    return next();
-  } catch (error) {
-    return next({
-      log: `productController.addProduct caught error: ${error}`,
-      message: { err: 'See server log for details' },
-    });
-  }
-};
+memberController.addMember = async (req, res, next) => {};
 
 module.exports = memberController;

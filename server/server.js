@@ -7,6 +7,7 @@ const PORT = 3000;
 // REQUIRED ROUTERS
 const productRouter = require('./routes/products.js');
 const memberRouter = require('./routes/members.js');
+const orderRouter = require('./routes/orders.js');
 
 app.use(express.json());
 
@@ -15,8 +16,8 @@ app.use(express.static(path.join(__dirname, './../dist')));
 
 // serve products data
 app.use('/api/products', productRouter);
-
 app.use('/api/members', memberRouter);
+app.use('/api/orders', orderRouter);
 
 // serve index.html from bundled dist folder
 app.get('/', (req, res) => {
