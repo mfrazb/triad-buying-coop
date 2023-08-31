@@ -5,6 +5,7 @@ import './../stylesheets/NavContainer.css';
 // TO DO - change logo photo to hosted img on cloudinary
 const NavContainer = () => {
   const [member, setMember] = useState([]);
+  const [order, setOrder] = useState([]);
 
   const fetchMember = () => {
     fetch('/api/members')
@@ -14,6 +15,13 @@ const NavContainer = () => {
   };
 
   useEffect(fetchMember, []);
+
+  const fetchCart = () => {
+    fetch('/api/orders')
+      .then(resp => resp.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  };
 
   return (
     <div id='nav'>
@@ -33,7 +41,7 @@ const NavContainer = () => {
             diversity_3
           </span>
         </a>
-        <a className='user-icons' href='#'>
+        <a onClick={fetchCart} className='user-icons' href='#'>
           <span className='user-icons material-symbols-outlined'>
             shopping_cart
           </span>
