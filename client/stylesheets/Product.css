@@ -6,7 +6,7 @@
   min-width: 276px;
 }
 
-.product-details {
+.product-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -26,14 +26,4 @@
 
 p {
   line-height: 1.5rem;
-}
-
-button {
-  margin: 0.5rem 0 0 0;
-  padding: 0.2em;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

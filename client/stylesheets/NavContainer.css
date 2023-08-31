@@ -27,9 +27,17 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+  #nav {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 480px) {
   #nav {
     flex-direction: column;
-    border: solid red 5px;
+  }
+  #header {
+    flex-direction: column;
   }
 }

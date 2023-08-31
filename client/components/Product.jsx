@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './../stylesheets/Product.css';
+import AddToCart from './AddToCart.jsx';
 import appleImg from './../assets/produce_apples.png';
 
 const Product = props => {
   const { productData } = props;
-
-  console.log('productdata:', productData);
+  console.log('productdata available to Product:', productData);
 
   return (
     <div className='product-card'>
       <h3>{productData.product_name}</h3>
-      <div className='product-details'>
-        <div>
+      <div className='product-content'>
+        <div className='product-details'>
           <p>{productData.product_code}</p>
           <p>Vendor: {productData.vendor}</p>
           <p>
@@ -21,7 +21,7 @@ const Product = props => {
               {productData.unit_type}
             </em>
           </p>
-          <button>Add to Cart</button>
+          <AddToCart productData={productData} />
         </div>
         <div className='img-placeholder'>
           <img className='img-produce' src={appleImg}></img>
