@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TBCLogo from './../assets/tbc_logo.jpg';
 import './../stylesheets/NavContainer.css';
 
 // TO DO - change logo photo to hosted img on cloudinary
 const NavContainer = () => {
+  const [member, setMember] = useState([]);
+
+  const fetchMember = () => {
+    fetch('/api/members')
+      .then(resp => resp.json())
+      .then(data => setMember(data))
+      .catch(error => console.log(error));
+  };
+
+  useEffect(fetchMember, []);
+
   return (
     <div id='nav'>
       <div id='header'>
@@ -15,7 +26,7 @@ const NavContainer = () => {
       </div>
       <div id='user'>
         <a className='user-icons' href='#'>
-          <h2 className='user-icons'>tbcshopper</h2>
+          <h2 className='user-icons'>Welcome, {member.first_name}</h2>
         </a>
         <a className='user-icons' href='#'>
           <span className='user-icons material-symbols-outlined'>
