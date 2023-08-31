@@ -6,15 +6,19 @@ const PORT = 3000;
 
 // REQUIRED ROUTERS
 const productRouter = require('./routes/products.js');
+const memberRouter = require('./routes/members.js');
 
 app.use(express.json());
 
-// is this correct way to serve dist folder?
+// is this correct way to serve dist folder for static files?
 app.use(express.static(path.join(__dirname, './../dist')));
 
 // serve products data
 app.use('/api/products', productRouter);
 
+app.use('/api/members', memberRouter);
+
+// serve index.html from bundled dist folder
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './../dist/index.html'));
 });
