@@ -120,3 +120,24 @@ INSERT INTO orders (	_id, transaction_amt, member_id)
 VALUES (100002, 105.12, 201);
 INSERT INTO orders (	_id, transaction_amt, member_id) 
 VALUES (100003, 51.80, 200);
+
+CREATE TABLE ordered_items (
+	_id serial NOT NULL PRIMARY KEY,
+	ordered_quantity INTEGER NOT NULL,
+	ordered_status varchar(50) NOT NULL, 
+	member_id INTEGER NOT NULL,
+	product_id INTEGER NOT NULL,
+	FOREIGN KEY (member_id) REFERENCES members (_id),
+	FOREIGN KEY (product_id) REFERENCES products (_id)
+);
+
+INSERT INTO ordered_items (ordered_quantity, ordered_status, member_id, product_id) 
+VALUES (5, 'reserved', 200, 10001);
+INSERT INTO ordered_items (ordered_quantity, ordered_status, member_id, product_id) 
+VALUES (2, 'reserved', 200, 10005);
+INSERT INTO ordered_items (ordered_quantity, ordered_status, member_id, product_id) 
+VALUES (2, 'reserved', 200, 10006);
+INSERT INTO ordered_items (ordered_quantity, ordered_status, member_id, product_id) 
+VALUES (1, 'reserved', 200, 10010);
+INSERT INTO ordered_items (ordered_quantity, ordered_status, member_id, product_id) 
+VALUES (1, 'reserved', 200, 10016);

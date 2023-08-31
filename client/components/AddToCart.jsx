@@ -8,32 +8,40 @@ const AddToCart = ({ productData }) => {
   const [count, setCount] = useState(0);
   const [clicked, setClicked] = useState(false);
 
+  // when user clicks Add to Cart button, change to item count button
   const handleAddClick = event => {
-    console.log(event.target);
-
-    // change button to
     setClicked(true);
     setCount(count + 1);
   };
 
+  // when user clicks, '-' or '+' adds or subtract from count
   const updateItemCount = event => {
-    console.log(event.target.textContent);
-    console.log(count);
-    // OR store order and post on submit?
+    if (count === 0) return;
+    if (count >= productData.product_quantity) {
+      // TO DO - add max notice when user reaches max quantity
+      // create max notice element
+      // const maxNotice = document.createElement('p');
+      // maxNotice.textContent = 'max';
+      // maxNotice.classList.add = 'max-notice';
+      // const button = event.target.closest('.cart-button');
+      // button.insertAdjacentElement('afterend', maxNotice);
+      return;
+    }
+
     if (event.target.textContent === '-') setCount(count - 1);
     else if (event.target.textContent === '+') setCount(count + 1);
   };
 
+  // TO DO - user update input field by inputting new number
   const changeItemCount = event => {};
 
+  // TO DO - post order on focus change?
   const postOrder = order => {
     console.log(order);
-    // maybe post order on focus change?
   };
 
-  // if clicked is true,  return updated button
-  // if clicked is not true, return regular button
-  // add max value
+  // if user hasn't clicked, display Add to Cart button
+  // if user has clicked Add to Cart, display item count button
   if (!clicked) {
     return (
       <div>

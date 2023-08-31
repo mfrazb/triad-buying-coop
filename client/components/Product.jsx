@@ -13,7 +13,7 @@ const Product = props => {
       <div className='product-content'>
         <div className='product-details'>
           <p>{productData.product_code}</p>
-          <p>Vendor: {productData.vendor}</p>
+          <p>Vendor: {productData.company_name}</p>
           <p>
             <em>
               ${Number(productData.price_per_unit).toFixed(2)} per{' '}

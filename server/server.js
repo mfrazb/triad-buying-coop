@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
@@ -8,16 +9,19 @@ const productRouter = require('./routes/products.js');
 
 app.use(express.json());
 
+// is this correct way to serve dist folder?
+app.use(express.static(path.join(__dirname, './../dist')));
+
 // serve products data
 app.use('/api/products', productRouter);
 
-// app.get('/api', (req, res) => {
-//   res.send('hello world from express!');
-// });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './../dist/index.html'));
+});
 
-// TODO: Add 404 html page
 // serve 404 status
-// app.use((req, res) => res.sendStatus(404));
+// TODO: Add 404 html page
+app.use((req, res) => res.sendStatus(404));
 
 // global error handler
 app.use((err, req, res, next) => {

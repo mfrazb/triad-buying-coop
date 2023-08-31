@@ -8,6 +8,8 @@
 }
 
 #header {
+  /* prevents text from wrapping*/
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -29,15 +31,14 @@
 
 @media (max-width: 600px) {
   #nav {
+    /* stacks nav sections */
     flex-direction: column;
   }
 }
 
 @media (max-width: 480px) {
-  #nav {
-    flex-direction: column;
-  }
   #header {
+    /* stacks logo and header text */
     flex-direction: column;
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import TBCLogo from './../assets/tbc_logo.jpg';
 import './../stylesheets/NavContainer.css';
 
+// TO DO - change logo photo to hosted img on cloudinary
 const NavContainer = () => {
   return (
     <div id='nav'>
