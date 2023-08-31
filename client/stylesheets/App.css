@@ -5,7 +5,7 @@
   --main-font-family: 'Cormorant', serif;
   --main-accent-clr: rgb(239, 212, 207);
   --lt-accent-clr: rgba(239, 212, 207, 0.5);
-  --button-highlight-color: #006d5b;
+  --button-highlight-color: rgb(0, 109, 91, 0.7);
 }
 * {
   margin: 0;

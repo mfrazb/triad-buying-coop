@@ -1,5 +1,5 @@
 #nav {
-  padding: 1rem;
+  padding: 1rem 0rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,12 +19,12 @@
 
 #user {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
   padding: 0.5rem 1rem;
-  background-color: var(--lt-accent-clr);
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  /* background-color: var(--lt-accent-clr);
+  border-radius: 5px; */
+  /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
 }
 
 @media (max-width: 600px) {
