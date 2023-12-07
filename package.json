@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production & nodemon server/server.js --mode production",
+    "build": "webpack --mode production && nodemon server/server.js --mode production",
     "start": "webpack serve --mode development"
   },
   "keywords": [],

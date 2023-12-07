@@ -4,7 +4,7 @@ const router = express.Router();
 // REQUIRED MIDDLEWARE
 const memberController = require('../controllers/memberController.js');
 
-// GET - logged in member from database
+// GET - logged-in member from database
 router.get('/', memberController.getMember, (req, res) => {
   res.status(200).json(res.locals.member);
 });
